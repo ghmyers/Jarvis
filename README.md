@@ -77,7 +77,8 @@ git clone https://github.com/ghmyers96/jarvis-slack-bot.git
 cd jarvis-slack-bot
 conda create -n jarvis_env python=3.10
 conda activate jarvis_env
-pip install -r config/requirements.txt```
+pip install -r config/requirements.txt
+```
 ---
 ### **2️⃣ Set Up Slack Credentials**
 1. Create a `.env` file in the root directory:
@@ -86,16 +87,18 @@ pip install -r config/requirements.txt```
 ---
 ### **3️⃣ Start the Slack Bot**
 ```bash
-python scripts/bot.py```
+python scripts/bot.py
+```
 ---
-4️⃣ Test the Model (Without Slack)
+### **4️⃣ Test the Model (Without Slack)**
 ```from src.ml_model import JarvisModel
 
 model = JarvisModel()
 X_train, y_train = model.import_db()
 model.train(X_train, y_train)
 
-print(model.predict(["Hey, how are you?"]))  # Expected: "GREET"```
+print(model.predict(["Hey, how are you?"]))  # Expected: "GREET"
+```
 ---
 
 
