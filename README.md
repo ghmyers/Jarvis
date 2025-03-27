@@ -26,7 +26,6 @@ The chatbot was built as a **proof-of-concept for interactive ML-based assistant
   - `SGDClassifier`
   - `Multinomial Naive Bayes`
 - **Data Storage**: SQLite database for labeled training examples
-- **Deployment**: Docker (optional)
 
 ---
 
