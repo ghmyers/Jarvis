@@ -92,7 +92,6 @@ python scripts/bot.py
 ---
 ### **4️⃣ Test the Model (Without Slack)**
 ```from src.ml_model import JarvisModel
-
 model = JarvisModel()
 X_train, y_train = model.import_db()
 model.train(X_train, y_train)
