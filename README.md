@@ -6,7 +6,7 @@ A **Slack-integrated natural language classifier** that learns from real-time us
 
 ## 📍 Project Overview
 
-Jarvis is an interactive **Slack chatbot** that classifies text messages into predefined intent categories using **scikit-learn models**. The bot allows users to:
+Jarvis is an interactive **Slack chatbot** that classifies text messages into predefined intent categories using **scikit-learn models** and **Open AI Agents**. The bot allows users to:
 - **Train the classifier** by labeling custom messages.  
 - **Test its predictions** on new messages.  
 - **Receive instant Slack replies** based on classified intent.  
@@ -21,10 +21,12 @@ The chatbot was built as a **proof-of-concept for interactive ML-based assistant
 ## 🛠️ Tech Stack
 
 - **Python** (`scikit-learn`, `sqlite3`, `websocket-client`, `requests`)
+- **openai** (Chat GPT 4.0 Agent)
 - **Slack API** (Real-Time Messaging, Chat & File Upload APIs)
-- **Machine Learning Models**: 
+- **Machine Learning Models**:-   
   - `SGDClassifier`
   - `Multinomial Naive Bayes`
+  - `Open AI Chat GPT 4.0 Agent`
 - **Data Storage**: SQLite database for labeled training examples
 
 ---
@@ -63,7 +65,7 @@ Example training data:
 ### 🏋️ **Training Pipeline**
 1. **User labels messages** → Stored in SQLite.
 2. **Text preprocessing** → `CountVectorizer` + `TF-IDF`.
-3. **Model training** → `SGDClassifier` or `MultinomialNB`.
+3. **Model training** → `SGDClassifier` or `MultinomialNB` or use pretrained `ChatGPT 4.0`
 4. **New messages** → Classified based on trained model.
 
 ---
